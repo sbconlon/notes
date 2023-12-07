@@ -1,3 +1,5 @@
+<script src="https://rawcdn.githack.com/oscarmorrison/md-page/master/md-page.js"></script><noscript>
+
 [Link](https://www.cs.cmu.edu/~sandholm/cs15-888F21/L02_sequence_form.pdf)
 ***
 
@@ -52,6 +54,7 @@ These two properties guarantee optimization methods can be used.
 ##### 2 - Strategies in Tree-Form Decision Making
 
 - A strategy for an agent in a TFSDP specifies a distribution over the set of actions $A_j$ at each decision point $j \in \mathcal{J}$ .
+<br/>
 
 ###### 2.1 - Behavioral Strategies
 
@@ -71,9 +74,10 @@ _Note:_ Is this the probability of taking a given action in a given state when a
 	- For $p_j \neq \varnothing$ (non-root decision points),   $\sum_{a \in A_j} \mathbf{x}[ja] = \mathbf{x}[p_j]$
 	- For $p_j = \varnothing$ (root decision points), $\sum_{a \in A_j}\mathbf{x}[ja] = 1$ 
 
-> Because of the probability-mass-conservation constraint, the set of valid sequence-form strategies (denoted $Q$) is convex.
+> Because of the probability-mass-conservation constraint, the set of valid sequence-form strategies (denoted $Q$) is convex. <br/>
 > $$Q := \Biggl\{\mathbf{x} \in \mathbb{R}_{\geq0}^{|\sum|} \: : \: \sum_{a \in A_j} \mathbf{x}[ja] = \begin{cases} 1, & \text{if}\ p_j=\varnothing \\ \mathbf{x}[p_j], & \text{otherwise} \end{cases} \: \Biggr\}$$
-<br/>
+<br/><br/>
+
 
 ###### 2.3 - Deterministic and Randomized Sequence-Form Strategies
 
