@@ -1,0 +1,336 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={1. Introduction},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{1. Introduction}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\href{https://www.cs.cmu.edu/~sandholm/cs15-888F21/lecture1.pdf}{Link}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subparagraph{1 - Introduction}\label{introduction}
+
+\textbf{Q:} Why study multi-step imperfect-information games?
+
+\textbf{A:} Most real-world games are incomplete-information games with
+sequential (or simultaneous) moves.
+
+Examples:
+
+\begin{itemize}
+\tightlist
+\item
+  Negotiation
+\item
+  Multi-stage auctions
+\item
+  Sequential auctions of multiple items
+\item
+  Card games
+\item
+  etc.
+\end{itemize}
+
+\begin{quote}
+Techniques for perfect-information games (ex. checkers, chess, and go)
+don\textquotesingle t apply to incomplete-information games.
+\end{quote}
+
+\textbf{Why?}
+
+\begin{itemize}
+\tightlist
+\item
+  Private information
+\item
+  Need to understand signals and how other players will interpret
+  signals
+\item
+  Need to understand deception
+\end{itemize}
+
+\subparagraph{2 - Terminology}\label{terminology}
+
+\begin{itemize}
+\tightlist
+\item
+  {\emph{Agent}} (or \emph{player})\\
+  \strut \\
+\item
+  {\emph{Action}} (or \emph{move}) - choice that the agent can make at a
+  point in the game.\\
+  \strut \\
+\end{itemize}
+
+\begin{itemize}
+\tightlist
+\item
+  {\emph{Strategy}} ({}) - mapping from history to actions.\\
+  {}(to the extent the agent can distinguish a history)\\
+  \strut \\
+\item
+  {\emph{Strategy set}} ({}) - strategies available to the agent.\\
+  \strut \\
+\item
+  {\emph{Strategy profile}} ({}) - one strategy for each agent.\\
+  \strut \\
+\end{itemize}
+
+\begin{itemize}
+\tightlist
+\item
+  {\emph{Utility}} ({}) -\\
+  Represents the motivations of the agents, maps outcomes to reals with
+  the property that a higher number implies that outcome is more
+  preferred.\\
+  \strut \\
+  \emph{Note} - Utility seems to be closely related to \emph{reward} in
+  RL?\\
+  \strut \\
+  An agent\textquotesingle s utility is only determined after all
+  agents, including nature, have chosen their strategy.\\
+  \strut \\
+\end{itemize}
+
+\begin{itemize}
+\tightlist
+\item
+  {\emph{Nature}} - pseudo agent that is used to model uncertainty.\\
+  \emph{Note} - Nature seems to be closely related to \emph{environment}
+  in RL.
+\end{itemize}
+
+\subparagraph{3 - Agenthood}\label{agenthood}
+
+\begin{quote}
+Agents seek to maximize their expected utility:\\
+\strut \\
+{}\strut \\
+\strut \\
+\end{quote}
+
+\begin{itemize}
+\item
+  Utility functions are scale-invariant.\\
+  \strut \\
+  \emph{Note} - We are only interested in the relative utility between
+  strategies, so scaling them all by a linear transform does not change
+  our rankings of actions.\\
+  \strut \\
+\item
+  The utility function is up to the agent and can be used to model an
+  agent\textquotesingle s risk attitude.
+
+  \emph{Example:}\\
+  Consider the two lotteries:\\
+  Lottery 1 - 100\% chance of winning \$0.5M\\
+  Lottery 2 - 50\% chance off winning \$1M
+
+  The lotteries have equal expected values however agents may prefer one
+  to the other depending on their willingness to take risk.
+\end{itemize}
+
+\begin{itemize}
+\tightlist
+\item
+  Often times, in game theory, only expected payoff or expected value
+  (EV) is considered.
+\end{itemize}
+
+\subparagraph{4 - Game representations}\label{game-representations}
+
+\begin{itemize}
+\item
+  {\emph{Extensive form}} - game tree form in which agents are nodes and
+  their actions are edges.\\
+  \strut \\
+\item
+  {\emph{Matrix form}} - Player 1\textquotesingle s strategy is along
+  the rows, Player 2\textquotesingle s strategy is along the columns,
+  each cell denotes the utility for each player given the action pair.
+\end{itemize}
+
+\subparagraph{5 - Dominant strategy
+"equilibrium"}\label{dominant-strategy-equilibrium}
+
+\begin{itemize}
+\item
+  {\emph{Best response}} ({}) - {} .\\
+  The strategy that yields the highest utility in response to the
+  opposing player\textquotesingle s strategy, {} .\\
+  \strut \\
+\item
+  {\emph{Dominant strategy}} ({}) - {} is the best response for all
+  opponent strategies, {}\\
+  The agent\textquotesingle s best strategy does not depend on its
+  opponent\textquotesingle s strategy.\\
+  \strut \\
+\item
+  {\emph{Dominant strategy "equilibrium"}} -\\
+  Strategy profile in which each agent has chosen its dominant
+  strategy.\\
+  Therefore, no agent has motivation to change their strategy.
+\end{itemize}
+
+\emph{Note} - dominant strategies don\textquotesingle t always exist.
+
+\subparagraph{6 - Nash equilibrium}\label{nash-equilibrium}
+
+\begin{itemize}
+\tightlist
+\item
+  {\emph{Nash equilibrium}} -\\
+  No player has incentive to deviate from their strategy so long as
+  their opponents do not deviate either. For every agent {}, {}\\
+  \strut \\
+\end{itemize}
+
+\begin{quote}
+Nash equilibrium is a subset of the dominant strategy equilibrium.
+Dominant strategy equilibrium holds for all opponent strategies;
+whereas, Nash equilibrium only holds for a fixed opponent strategy.
+
+\emph{i.e.} I don\textquotesingle t change if you don\textquotesingle t
+change, and vice versa.
+\end{quote}
+
+\hfill\break
+
+Nash equilibrium may not exist or be unique for all games. (ex. Battle
+of the Sexes)
+
+\begin{itemize}
+\item
+  {\textbf{Theorem:}} \textbf{Existence of (pure-strategy) Nash
+  equilibria}\\
+  Any finite game, where each action node is alone in its information
+  set is dominance solvable by backward induction.
+
+  \emph{Note} - an agent is "alone in its information set" if at every
+  point in the game, the agent knows what moves have been played so far.
+
+  \textbf{Proof:} Multi-player minimax search
+\end{itemize}
+
+\subparagraph{7 - Mixed-strategy Nash equilibrium
+(rock-paper-scissors)}\label{mixed-strategy-nash-equilibrium-rock-paper-scissors}
+
+\includegraphics[width=5.20833in,height=\textheight]{C:/Users/SBC98/Desktop/Misc/obsidian-vaults/root/rock-paper-scissors.jpg}
+
+\begin{itemize}
+\item
+  {\emph{Bayesian game}} - game in which players have incomplete
+  information.\\
+  In the case of rock-paper-scissors, the agents don\textquotesingle t
+  have knowledge of the other\textquotesingle s move.\\
+  \strut \\
+\item
+  {\emph{Bayes-Nash equilibrium}} - Nash equilibrium of a Bayesian
+  game.\\
+  A strategy profile that maximizes the \emph{expected} payoff for each
+  player given their beliefs and strategies played by others.\\
+  \strut \\
+\item
+  {\emph{Mixed strategy}} - the agent\textquotesingle s strategy is a
+  weighted mixture of pure strategies.\\
+  Rock-paper-scissors has a \emph{symmetric} mixed strategy Nash
+  equilibrium where all the agents have the same strategy.\\
+  \strut \\
+\item
+  Existence:\\
+  {\textbf{Theorem:}} Every finite player, finite strategy game has at
+  least one Nash equilibrium if we admit mixed-strategy equilibria as
+  well as pure. {{[}1950-Nash{]}}.\\
+  \strut \\
+\item
+  Complexity of finding a Nash equilibrium in a normal form game:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    2-player 0-sum: polytime with LP
+  \item
+    2-player games:
+
+    \begin{itemize}
+    \tightlist
+    \item
+      PPAD-complete {{[}2009-Chen{]} {[}2005-Abbot{]}
+      {[}2006-Daskalakis{]}}
+    \item
+      NP-complete to find an approx. \emph{good} Nash equilibrium
+      {{[}2008-Conitzer{]}}
+    \end{itemize}
+  \item
+    3-player games are FIXP-complete {{[}2007-Etessami{]}}
+  \end{itemize}
+\end{itemize}
+
+\end{document}
