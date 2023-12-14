@@ -18,3 +18,4 @@
 | Title | Authors | Year |
 | --- | --- | --- |
 | Superhuman AI for Multiplayer Poker | N. Brown <br/> T. Sandholm | 2019 |
+| Social and Affective Machine Learning | N. Jaques | 2019 |
