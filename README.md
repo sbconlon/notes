@@ -24,4 +24,5 @@
 | Connecting Optimal Ex-Ante Collusion in Teams to Extensive-Form Correlation: <br/> Faster Algorithms and Positive Complexity | G. Farina <br/> A. Celli <br/> N. Gatti <br/> T. Sandholm | 2021 |
 | Simple Uncoupled No-Regret Learning Dynamics for Extensive-Form Correlated Equilibrium | G. Farina <br/> A. Celli <br/> A. Marchesi <br/> N. Gatti | 2021 |
 | Stackelberg Actor-Critic: A Game-Theoretic Perspective | L. Zheng <br/> T. Fiez <br/> Z. Alumbaugh <br/> B. Chasnov <br/> L. Ratliff | 2021 |
+| Decision-Dependent Risk Minimization in Geometrically Decaying Dynamic Environments | M. Ray <br/> L. Ratliff <br/> D. Drusvyatskiy <br/> F. Maryam | 2022 |
 | Exploiting extensive-form structure in empirical game-theoretic analysis | C. Konicki <br/> M. Chakraborty <br/> M. Wellman | 2023 |
