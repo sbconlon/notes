@@ -18,6 +18,7 @@
 | Title | Authors | Year |
 | --- | --- | --- |
 | An Introduction to Counterfactual Regret Minimization | T. Neller <br/> M. Lanctot | 2013 |
+| DeepStack: Expert-level artificial intelligence in heads-up no-limit poker | M. Moravick et. al. | 2017 |
 | Superhuman AI for Multiplayer Poker | N. Brown <br/> T. Sandholm | 2019 |
 | Social and Affective Machine Learning | N. Jaques | 2019 |
 | Coordination in Adversarial Sequential Team Games <br/> via Multi-agent Deep Reinforcement Learning | A. Celli <br/> M. Ciccone <br/> R. Bongo <br/> N. Gatti | 2019 |
