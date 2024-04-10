@@ -18,7 +18,7 @@
 | Title | Authors | Year |
 | --- | --- | --- |
 | An Introduction to Counterfactual Regret Minimization | T. Neller <br/> M. Lanctot | 2013 |
-| DeepStack: Expert-level artificial intelligence in heads-up no-limit poker | M. Moravick et. al. | 2017 |
+| DeepStack: Expert-level artificial intelligence in heads-up no-limit poker | M. Moravick <br/> et. al. | 2017 |
 | Superhuman AI for Multiplayer Poker | N. Brown <br/> T. Sandholm | 2019 |
 | Social and Affective Machine Learning | N. Jaques | 2019 |
 | Coordination in Adversarial Sequential Team Games <br/> via Multi-agent Deep Reinforcement Learning | A. Celli <br/> M. Ciccone <br/> R. Bongo <br/> N. Gatti | 2019 |
@@ -28,3 +28,4 @@
 | Stackelberg Actor-Critic: A Game-Theoretic Perspective | L. Zheng <br/> T. Fiez <br/> Z. Alumbaugh <br/> B. Chasnov <br/> L. Ratliff | 2021 |
 | Decision-Dependent Risk Minimization in Geometrically Decaying Dynamic Environments | M. Ray <br/> L. Ratliff <br/> D. Drusvyatskiy <br/> F. Maryam | 2022 |
 | Exploiting extensive-form structure in empirical game-theoretic analysis | C. Konicki <br/> M. Chakraborty <br/> M. Wellman | 2023 |
+| Student of Games: A unified learning algorithm for learning both perfect <br/> and imperfect information games | M. Schmid <br/> et. al. | 2023 |
